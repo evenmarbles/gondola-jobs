@@ -53,9 +53,7 @@ Made with ♥ in Austin, Boulder, Key West, Medellin, Raleigh - https://gondola.
     <link
         href="https://ventureoutdoorsflorida.com/wp-content/uploads/sites/572/gondola-custom-css/gondola-custom-css.css"
         defer="defer" rel="stylesheet" type="text/css" media="all" />
-    <link
-        href="custom-styles.css"
-        defer="defer" rel="stylesheet" type="text/css" media="all" />
+    <link href="custom-styles.css" defer="defer" rel="stylesheet" type="text/css" media="all" />
     <style id='rocket-lazyload-inline-css' type='text/css'>
         .rll-youtube-player {
             position: relative;
@@ -224,38 +222,6 @@ Made with ♥ in Austin, Boulder, Key West, Medellin, Raleigh - https://gondola.
             } else {
                 let email = $("#gondola-email-newsletter-form #gondola_email").val();
                 if (email && validateEmail(email)) {
-                    $("iframe[title=\"Main content of the hCaptcha challenge\"]").parent().parent().css("visibility", "visible")
-                    hcaptcha.reset()
-                } else {
-                    $("iframe[title=\"Main content of the hCaptcha challenge\"]").parent().parent().css("visibility", "hidden")
-                    hcaptcha.reset()
-                }
-            }
-        }
-
-        function onSubmitContact(token) {
-            document.getElementById("gondola-contact-form").submit();
-        }
-
-        function beforeCaptchaContact(token) {
-            let gondolaContactForm = $("#gondola-contact-form").validate({
-                onsubmit: false,
-                rules: {
-                    gondola_email: {
-                        required: true,
-                        email: true,
-                    },
-                },
-            });
-
-            if (!gondolaContactForm.valid()) {
-                $("iframe[title=\"Main content of the hCaptcha challenge\"]").parent().parent().css("visibility", "hidden")
-                hcaptcha.reset()
-            } else {
-                let email = $("#gondola-contact-form #gondola_email").val();
-                let name = $("#gondola-contact-form #gondola_name").val();
-                let message = $("#gondola-contact-form #gondola_message").val();
-                if (email && validateEmail(email) && name && message) {
                     $("iframe[title=\"Main content of the hCaptcha challenge\"]").parent().parent().css("visibility", "visible")
                     hcaptcha.reset()
                 } else {
@@ -541,13 +507,15 @@ Made with ♥ in Austin, Boulder, Key West, Medellin, Raleigh - https://gondola.
                                         class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-781 nav-item">
                                         <a itemprop="url"
                                             href="https://ventureoutdoorsflorida.com/category/kayak-expedition-trips/"
-                                            class="dropdown-item"><span itemprop="name">Multi-Day Tours</span></a></li>
+                                            class="dropdown-item"><span itemprop="name">Multi-Day Tours</span></a>
+                                    </li>
                                 </ul>
                             </li>
                             <li id="menu-item-405"
                                 class="menu-item menu-item-type-custom menu-item-object-custom menu-item-405 nav-item">
                                 <a itemprop="url" href="https://ventureoutdoorsflorida.com/category/kayak-lessons/"
-                                    class="nav-link"><span itemprop="name">Kayak Lessons</span></a></li>
+                                    class="nav-link"><span itemprop="name">Kayak Lessons</span></a>
+                            </li>
                             <li id="menu-item-592"
                                 class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown-cliackble dropdown menu-item-592 nav-item">
                                 <a href="#" data-hover="dropdown" aria-haspopup="true" aria-expanded="false"
@@ -559,7 +527,8 @@ Made with ♥ in Austin, Boulder, Key West, Medellin, Raleigh - https://gondola.
                                         <a itemprop="url"
                                             href="https://ventureoutdoorsflorida.com/product/supermoon-spooktacular-kayak-under-the-full-moons-haunting-glow/"
                                             class="dropdown-item"><span itemprop="name">Supermoon
-                                                Spooktacular</span></a></li>
+                                                Spooktacular</span></a>
+                                    </li>
                                     <li id="menu-item-594"
                                         class="menu-item menu-item-type-custom menu-item-object-custom menu-item-594 nav-item">
                                         <a itemprop="url"
@@ -579,7 +548,8 @@ Made with ♥ in Austin, Boulder, Key West, Medellin, Raleigh - https://gondola.
                             <li id="menu-item-34"
                                 class="contact menu-item menu-item-type-custom menu-item-object-custom current-menu-item active menu-item-34 nav-item">
                                 <a itemprop="url" href="/contact" class="nav-link" aria-current="page"><span
-                                        itemprop="name">Contact</span></a></li>
+                                        itemprop="name">Contact</span></a>
+                            </li>
                             <li class="container menu-item book-now"><a
                                     href="https://fareharbor.com/embeds/book/ventureoutdoorsllc/items/?language=en-us&full-items=yes&back=https://ventureoutdoorsflorida.com/&g4=yes"
                                     class="btn btn-header text-white btn-block mt-3 font-weight-bold float-right"
@@ -627,22 +597,26 @@ Made with ♥ in Austin, Boulder, Key West, Medellin, Raleigh - https://gondola.
                                 <li
                                     class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-542 nav-item container">
                                     <a itemprop="url" href="https://ventureoutdoorsflorida.com/#product-anchor"
-                                        class="nav-link"><span itemprop="name">Kayak Tours Orlando</span></a></li>
+                                        class="nav-link"><span itemprop="name">Kayak Tours Orlando</span></a>
+                                </li>
                                 <li
                                     class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-210 nav-item container">
                                     <a itemprop="url" href="https://ventureoutdoorsflorida.com/category/hiking-tours/"
-                                        class="nav-link"><span itemprop="name">Hiking Tours Orlando</span></a></li>
+                                        class="nav-link"><span itemprop="name">Hiking Tours Orlando</span></a>
+                                </li>
                                 <li
                                     class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-781 nav-item container">
                                     <a itemprop="url"
                                         href="https://ventureoutdoorsflorida.com/category/kayak-expedition-trips/"
-                                        class="nav-link"><span itemprop="name">Multi-Day Tours</span></a></li>
+                                        class="nav-link"><span itemprop="name">Multi-Day Tours</span></a>
+                                </li>
                             </ul>
                         </li>
                         <li
                             class="menu-item menu-item-type-custom menu-item-object-custom menu-item-405 nav-item container">
                             <a itemprop="url" href="https://ventureoutdoorsflorida.com/category/kayak-lessons/"
-                                class="nav-link"><span itemprop="name">Kayak Lessons</span></a></li>
+                                class="nav-link"><span itemprop="name">Kayak Lessons</span></a>
+                        </li>
                         <li
                             class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown-cliackble dropdown menu-item-592 nav-item container">
                             <a href="#" data-hover="dropdown" aria-haspopup="true" aria-expanded="false"
@@ -652,24 +626,29 @@ Made with ♥ in Austin, Boulder, Key West, Medellin, Raleigh - https://gondola.
                                     class="menu-item menu-item-type-custom menu-item-object-custom menu-item-593 nav-item container">
                                     <a itemprop="url"
                                         href="https://ventureoutdoorsflorida.com/product/supermoon-spooktacular-kayak-under-the-full-moons-haunting-glow/"
-                                        class="nav-link"><span itemprop="name">Supermoon Spooktacular</span></a></li>
+                                        class="nav-link"><span itemprop="name">Supermoon Spooktacular</span></a>
+                                </li>
                                 <li
                                     class="menu-item menu-item-type-custom menu-item-object-custom menu-item-594 nav-item container">
                                     <a itemprop="url"
                                         href="https://ventureoutdoorsflorida.com/product/kayak-rescue-mastering-vital-water-safety-skills/"
-                                        class="nav-link"><span itemprop="name">Kayak Rescue Cllinic</span></a></li>
+                                        class="nav-link"><span itemprop="name">Kayak Rescue Cllinic</span></a>
+                                </li>
                             </ul>
                         </li>
                         <li
                             class="blog menu-item menu-item-type-custom menu-item-object-custom menu-item-33 nav-item container">
-                            <a itemprop="url" href="/blog" class="nav-link"><span itemprop="name">Blog</span></a></li>
+                            <a itemprop="url" href="/blog" class="nav-link"><span itemprop="name">Blog</span></a>
+                        </li>
                         <li
                             class="about menu-item menu-item-type-custom menu-item-object-custom menu-item-35 nav-item container">
-                            <a itemprop="url" href="/about" class="nav-link"><span itemprop="name">About</span></a></li>
+                            <a itemprop="url" href="/about" class="nav-link"><span itemprop="name">About</span></a>
+                        </li>
                         <li
                             class="contact menu-item menu-item-type-custom menu-item-object-custom current-menu-item active menu-item-34 nav-item container">
                             <a itemprop="url" href="/contact" class="nav-link" aria-current="page"><span
-                                    itemprop="name">Contact</span></a></li>
+                                    itemprop="name">Contact</span></a>
+                        </li>
                         <li class="container menu-item book-now"><a
                                 href="https://fareharbor.com/embeds/book/ventureoutdoorsllc/items/?language=en-us&full-items=yes&back=https://ventureoutdoorsflorida.com/&g4=yes"
                                 class="btn btn-header text-white btn-block mt-3 font-weight-bold float-right"
@@ -691,13 +670,17 @@ Made with ♥ in Austin, Boulder, Key West, Medellin, Raleigh - https://gondola.
                         </div>
                     </div>
                 </div>
-
                 <div class="row mt-3 mb-3 zig-zag-margin">
                     <div class="col-12">
                         <div class="zig-zag svg-center" style="height:5px; background: #ff7140"></div>
                     </div>
                 </div>
-
+                <div class="row mt-0">
+                    <div class="col-12">
+                        <div class="col-12 small-text-below font-20 text-center">Work outside. Sever others. Have fun!
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -707,11 +690,354 @@ Made with ♥ in Austin, Boulder, Key West, Medellin, Raleigh - https://gondola.
                 <div class="full-width off-white-background pb-5">
                     <div class="container">
                         <div class="row pb-5">
+                            <div class="col-12">
+                                <div class="col-12 mt-5 font-20 text-center" style="color: #ff7140; font-style: italic">
+                                    Get paid to spend your days in nature,
+                                    share stories, and inspire guests from around the world.</div>
+                                <div class="col-12 font-20 text-center" style="color: #ff7140; font-style: italic">Have
+                                    a fun, rewarding job—and GROW WITH US!</div>
+                            </div>
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col-md-1"></div>
+                            <div class="col-12 col-lg-10 mt-n5">
+                                <div class="row justify-content-center">
+                                    <div class="col-12 col-xl-6 d-flex mt-5">
+                                        <div class="flex-fill">
+                                            <div class="row pl-4 pr-4 pt-3">
+                                                <div class="col-12 product-header-image">
+                                                    <img src="assets/why-apply.jpg" loading="lazy" class="img-fluid"
+                                                        style="border-radius: 15px;" alt="">
+                                                </div>
+                                                <div class="col-12 mt-4">
+                                                    <h3 class="font-weight-bold font-20 text-color">Why Apply?</h3>
+                                                    <div class="pt-2 font-14 text-light1">At Venture Outdoors, guiding
+                                                        is more than a job—it’s a craft. We offer training with
+                                                        certified instructors, competitive pay, and strong rewards for
+                                                        exceptional guest experiences. If you love being in the
+                                                        outdoors,
+                                                        connecting with people, and growing your skills through
+                                                        meaningful work, this is the place to grow.</div>
+                                                </div>
+                                            </div>
+                                            <div class="row pl-4 pr-4 pt-3">
+                                                <div class="col-12"><a href="">Read more</a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-xl-6 d-flex mt-5">
+                                        <div class="flex-fill">
+                                            <div class="row pl-4 pr-4 pt-3">
+                                                <div class="col-12 product-header-image">
+                                                    <img src="assets/who-are-we.JPG" loading="lazy"
+                                                        class="img-fluid" style="border-radius: 15px;" alt="">
+                                                </div>
+                                                <div class="col-12 mt-4">
+                                                    <h3 class="font-weight-bold font-20 text-color">Who Are We?</h3>
+                                                    <div class="pt-2 font-14 text-light1">
+                                                        <p>Venture Outdoors is a small,
+                                                            owner-led outdoor adventure company offering high-quality,
+                                                            small-group kayak and eco-nature tours throughout Central
+                                                            Florida.</p>
+                                                        <p>We are known for our strong safety culture, thoughtful guest
+                                                            experiences, and guides who combine technical competence,
+                                                            storytelling, and genuine care for people and place.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-1"></div>
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col-md-1"></div>
+                            <div class="col-12 col-lg-10 mt-n5">
+                                <div class="row justify-content-center">
+                                    <div class="col-12 col-xl-6 d-flex mt-5">
+                                        <div class="flex-fill">
+                                            <div class="row pl-4 pr-4 pt-3">
+                                                <div class="col-12 product-header-image">
+                                                    <img src="assets/we-are-looking-for.jpg" loading="lazy" class="img-fluid"
+                                                        style="border-radius: 15px;" alt="">
+                                                </div>
+                                                <div class="col-12 mt-4">
+                                                    <h3 class="font-weight-bold font-20 text-color">What We're Looking
+                                                        For?</h3>
+                                                    <div class="pt-2 font-14 text-light1">Do you enjoy serving others?
+                                                        Are you passionate about the outdoors? Are you a hard worker
+                                                        with a positive attitude? Are you a natural leader who inspires
+                                                        confidence? Are you an engaging conversationalist? We’re seeking
+                                                        these qualities—and more—in our applicants for Trip Leaders.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row pl-4 pr-4 pt-3">
+                                                <div class="col-12"><a href="leader-qualifications.html">Read more</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-xl-6 d-flex mt-5">
+                                        <div class="flex-fill">
+                                            <div class="row pl-4 pr-4 pt-3">
+                                                <div class="col-12 product-header-image">
+                                                    <img src="assets/trip-leader-roles.jpg" loading="lazy"
+                                                        class="img-fluid" style="border-radius: 15px;" alt="">
+                                                </div>
+                                                <div class="col-12 mt-4">
+                                                    <h3 class="font-weight-bold font-20 text-color">Roles of a Trip
+                                                        Leader</h3>
+                                                    <div class="pt-2 font-14 text-light1">Spending time on an adventure
+                                                        with a Venture Outdoors Trip Leader is like exploring with a
+                                                        host, educator, problem-solver, and trusted friend all in one.
+                                                        Our Trip Leaders are confident, approachable leaders with a
+                                                        strong sense of hospitality and a passion for sharing meaningful
+                                                        experiences, stories, and knowledge. They create an atmosphere
+                                                        where guests feel safe, welcomed, and connected—to each other
+                                                        and to the places we explore.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row pl-4 pr-4 pt-3">
+                                                <div class="col-12"><a href="leader-qualifications.html">Read more</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-1"></div>
+                    </div>
+                </div>
+        </div>
+        <section id="cta" class="full-width bg-white pt-5 pb-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-2"></div>
+                    <div class="col-12 col-md-8 text-center">
+                        <div class="mt-3">
+                            <a href="https://forms.gle/2UtsoMWMnfj93a8h6" target="_blank" rel="noopener noreferrer"
+                                class="btn btn-primary btn-lg text-white text-decoration-none font-weight-bold text-uppercase">Apply
+                                Now!</a>
+                        </div>
+                    </div>
+                    <div class="col-md-2"></div>
+                </div>
+            </div>
+        </section>
+        <section id="faq" class="full-width bg-white pt-5 pb-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-4">
+                        <h2 class="font-weight-bold font-36 text-color">
+                            Frequently asked questions
+                        </h2>
+
+                        <div class="row mt-3 mb-3 zig-zag-margin">
+                            <div class="col-12">
+                                <div class="zig-zag " style="height:5px; background: #ff7140"></div>
+                            </div>
+                        </div>
+
+                        <div class="text-light1">
+                            Most frequent questions and answers
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-8">
+                        <div class="accordion" id="faq-accordion">
+                            <div class="card">
+                                <div class="card-header border-bottom-0" id="faq0">
+                                    <h3 class="mb-0"><a data-toggle="collapse" data-target="#collapse0"
+                                            aria-expanded="false" aria-controls="collapse0"
+                                            class="text-color faq-question">
+                                            <div class="row">
+                                                <div class="float-left font-weight-bold font-16 text-break col-11 mt-1">
+                                                    What should I wear for a kayak tour?</div>
+                                                <div class="col-1"><i
+                                                        class="far fa-chevron-down float-right text-link"></i>
+                                                </div>
+                                            </div>
+                                        </a></h3>
+                                </div>
+                                <div id="collapse0" class="collapse" aria-labelledby="faq0"
+                                    data-parent="#faq-accordion">
+                                    <div class="card-body text-light1 pt-0">
+                                        <p>Wear comfortable, moisture-wicking clothing, and consider a swimsuit
+                                            or quick-dry shorts. Don't forget sunscreen, a hat, and water shoes
+                                            or sandals with a secure strap.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header border-bottom-0" id="faq1">
+                                    <h3 class="mb-0"><a data-toggle="collapse" data-target="#collapse1"
+                                            aria-expanded="false" aria-controls="collapse1"
+                                            class="text-color faq-question">
+                                            <div class="row">
+                                                <div class="float-left font-weight-bold font-16 text-break col-11 mt-1">
+                                                    Are kayak tours safe?</div>
+                                                <div class="col-1"><i
+                                                        class="far fa-chevron-down float-right text-link"></i>
+                                                </div>
+                                            </div>
+                                        </a></h3>
+                                </div>
+                                <div id="collapse1" class="collapse" aria-labelledby="faq1"
+                                    data-parent="#faq-accordion">
+                                    <div class="card-body text-light1 pt-0">
+                                        <p>Yes, kayak tours are generally safe when conducted by experienced
+                                            guides. They provide safety instructions and equipment. Always
+                                            follow their guidance and wear a life jacket.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header border-bottom-0" id="faq2">
+                                    <h3 class="mb-0"><a data-toggle="collapse" data-target="#collapse2"
+                                            aria-expanded="false" aria-controls="collapse2"
+                                            class="text-color faq-question">
+                                            <div class="row">
+                                                <div class="float-left font-weight-bold font-16 text-break col-11 mt-1">
+                                                    Is wildlife viewing guaranteed on kayak tours?</div>
+                                                <div class="col-1"><i
+                                                        class="far fa-chevron-down float-right text-link"></i>
+                                                </div>
+                                            </div>
+                                        </a></h3>
+                                </div>
+                                <div id="collapse2" class="collapse" aria-labelledby="faq2"
+                                    data-parent="#faq-accordion">
+                                    <div class="card-body text-light1 pt-0">
+                                        <p>While wildlife sightings are common, they can't be guaranteed. Guides
+                                            do their best to maximize your chances of seeing wildlife in their
+                                            natural habitat.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header border-bottom-0" id="faq3">
+                                    <h3 class="mb-0"><a data-toggle="collapse" data-target="#collapse3"
+                                            aria-expanded="false" aria-controls="collapse3"
+                                            class="text-color faq-question">
+                                            <div class="row">
+                                                <div class="float-left font-weight-bold font-16 text-break col-11 mt-1">
+                                                    Are kayak lessons suitable for children?</div>
+                                                <div class="col-1"><i
+                                                        class="far fa-chevron-down float-right text-link"></i>
+                                                </div>
+                                            </div>
+                                        </a></h3>
+                                </div>
+                                <div id="collapse3" class="collapse" aria-labelledby="faq3"
+                                    data-parent="#faq-accordion">
+                                    <div class="card-body text-light1 pt-0">
+                                        <p>Many kayak lesson providers offer lessons for children and families.
+                                            The minimum age may vary, so check with the provider for specific
+                                            age requirements.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header border-bottom-0" id="faq4">
+                                    <h3 class="mb-0"><a data-toggle="collapse" data-target="#collapse4"
+                                            aria-expanded="false" aria-controls="collapse4"
+                                            class="text-color faq-question">
+                                            <div class="row">
+                                                <div class="float-left font-weight-bold font-16 text-break col-11 mt-1">
+                                                    Do I need to be physically fit for a hike?</div>
+                                                <div class="col-1"><i
+                                                        class="far fa-chevron-down float-right text-link"></i>
+                                                </div>
+                                            </div>
+                                        </a></h3>
+                                </div>
+                                <div id="collapse4" class="collapse" aria-labelledby="faq4"
+                                    data-parent="#faq-accordion">
+                                    <div class="card-body text-light1 pt-0">
+                                        <p>The difficulty of hikes varies, so there are options suitable for all
+                                            fitness levels. Guides can recommend hikes that match your physical
+                                            abilities.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header border-bottom-0" id="faq5">
+                                    <h3 class="mb-0"><a data-toggle="collapse" data-target="#collapse5"
+                                            aria-expanded="false" aria-controls="collapse5"
+                                            class="text-color faq-question">
+                                            <div class="row">
+                                                <div class="float-left font-weight-bold font-16 text-break col-11 mt-1">
+                                                    What should I bring on a hike?</div>
+                                                <div class="col-1"><i
+                                                        class="far fa-chevron-down float-right text-link"></i>
+                                                </div>
+                                            </div>
+                                        </a></h3>
+                                </div>
+                                <div id="collapse5" class="collapse" aria-labelledby="faq5"
+                                    data-parent="#faq-accordion">
+                                    <div class="card-body text-light1 pt-0">
+                                        <p>Essential items include sturdy hiking shoes, weather-appropriate
+                                            clothing, a backpack, water, snacks, a map, and a first-aid kit.
+                                            Follow your guide's recommendations.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header border-bottom-0" id="faq6">
+                                    <h3 class="mb-0"><a data-toggle="collapse" data-target="#collapse6"
+                                            aria-expanded="false" aria-controls="collapse6"
+                                            class="text-color faq-question">
+                                            <div class="row">
+                                                <div class="float-left font-weight-bold font-16 text-break col-11 mt-1">
+                                                    Are hikes suitable for children and families?</div>
+                                                <div class="col-1"><i
+                                                        class="far fa-chevron-down float-right text-link"></i>
+                                                </div>
+                                            </div>
+                                        </a></h3>
+                                </div>
+                                <div id="collapse6" class="collapse" aria-labelledby="faq6"
+                                    data-parent="#faq-accordion">
+                                    <div class="card-body text-light1 pt-0">
+                                        <p>Yes, many guided hikes are family-friendly. Guides can adjust the
+                                            pace and route to accommodate children and ensure safety.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header border-bottom-0" id="faq7">
+                                    <h3 class="mb-0"><a data-toggle="collapse" data-target="#collapse7"
+                                            aria-expanded="false" aria-controls="collapse7"
+                                            class="text-color faq-question">
+                                            <div class="row">
+                                                <div class="float-left font-weight-bold font-16 text-break col-11 mt-1">
+                                                    Do tour guides accept tips?</div>
+                                                <div class="col-1"><i
+                                                        class="far fa-chevron-down float-right text-link"></i>
+                                                </div>
+                                            </div>
+                                        </a></h3>
+                                </div>
+                                <div id="collapse7" class="collapse" aria-labelledby="faq7"
+                                    data-parent="#faq-accordion">
+                                    <div class="card-body text-light1 pt-0">
+                                        <p>Our guides do accept tips, and they are greatly appreciated. Tipping
+                                            is left up to the individual, but as a general practice, 15%-20% of
+                                            the trip cost is the common gratuity in Orlando.</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </main>
-        </div>
+            </div>
+        </section>
+        </main>
+    </div>
     </div>
     <footer class="content-info bg-footer font-14 pt-5 pb-5" id="footer">
         <div class="container">
